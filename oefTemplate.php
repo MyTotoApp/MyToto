@@ -20,38 +20,48 @@ $result = $conn->query($sql);
 ?> 
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <table class="table table-bordered table-hover">
-        <?php
-        if ($result->num_rows > 0) 
-        {
-          
-          while($row = $result->fetch_assoc()) 
-          {
-            echo "<tr><td>";
-            echo $row["match_date"];
-			echo "<td>";
-			echo $row["home"];
-			echo "<td>";
-            echo $row["match_home_goals"];
-			echo "<td>-<td>";
-            echo $row["match_away_goals"];
-            echo "<td>";echo $row["away"];
-			echo "<td>";
-            echo $row["competition_name"];
-            echo "<td>";
-            echo $row["status"];
+
+          <thead>
+            <tr>
+                <th scope="col">Home</th>
+                <th scope="col">Score</th>
+                <th scope="col">Away</th>
+                <th scope="col">Competition</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+            </tr>
+          </thead>
+
+            <?php
+            if ($result->num_rows > 0)
+            {
+
+              while($row = $result->fetch_assoc())
+              {
+                echo "<tr><td>";
+                echo $row["home"];
+                echo "<td>";
+                echo $row["match_home_goals"] . ' - ' .  $row["match_away_goals"];
+                echo "<td>";echo $row["away"];
+                echo "<td>";
+                echo $row["competition_name"];
+                echo "<td>";
+                echo $row["match_date"];
+                echo "<td>";
+                echo $row["status"];
 
 
-           }
-        } else 
-        {
-          echo "0 results";
-        }
-        $conn->close();
-        ?>
+               }
+            } else
+            {
+              echo "0 results";
+            }
+            $conn->close();
+            ?>
       </table></div>
-      <div class="col-md-6"><img src="images/logoToto.jpg" class="img-responsive" alt="Responsive image"></div>
+
     </div>
   </div>
 
