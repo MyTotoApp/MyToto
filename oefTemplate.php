@@ -5,13 +5,16 @@ include 'header.php';
 <?php
 $conn= dbconnect();
 
-$sql = "SELECT `match_date`, cl1.`club_id`, cl1.`club_name` AS home, 
-		cl2.club_id, cl2.`club_name` AS away, `match_home_goals`, `match_away_goals`, cmp1.competition_name
-		FROM tbl_match"
-    . "    JOIN tbl_clubs AS cl1 ON match_home_id = cl1.club_id\n"
-    . "    JOIN tbl_clubs AS cl2 ON match_away_id = cl2.club_id\n"
-    . "    JOIN tbl_competitions AS cmp1 ON match_competition = cmp1.competition_id\n"
-    . "    ORDER BY match_id ASC";
+$sql = "SELECT `match_date`, cl1.`club_id`, cl1.`club_name` AS home, \n"
+
+    . "		cl2.club_id, cl2.`club_name` AS away, `match_home_goals`, `match_away_goals`, cmp1.competition_name, st.status\n"
+    . "		FROM tbl_match\n"
+    . "        JOIN tbl_clubs AS cl1 ON match_home_id = cl1.club_id\n"
+    . "        JOIN tbl_clubs AS cl2 ON match_away_id = cl2.club_id\n"
+    . "        JOIN tbl_competitions AS cmp1 ON match_competition = cmp1.competition_id\n"
+    . "        JOIN tbl_status AS st ON match_status = st.status_id\n"
+    . "        ORDER BY match_id ASC";
+
 $result = $conn->query($sql);
 
 ?> 
@@ -36,6 +39,8 @@ $result = $conn->query($sql);
             echo "<td>";echo $row["away"];
 			echo "<td>";
             echo $row["competition_name"];
+            echo "<td>";
+            echo $row["status"];
 
 
            }

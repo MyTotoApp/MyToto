@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49aca32b-4b1d-4d27-952c-f9afe7214cec" name="Default" comment="" />
+    <list default="true" id="49aca32b-4b1d-4d27-952c-f9afe7214cec" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/oefTemplate.php" afterPath="$PROJECT_DIR$/oefTemplate.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,9 +29,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
               <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-              <folding>
-                <marker date="1540542139009" expanded="true" signature="1094:1118" ph="SELECT * FRO... tbl_menu" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -36,13 +37,10 @@
       <file leaf-file-name="oefTemplate.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/oefTemplate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+            <state relative-caret-position="540">
+              <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
               <folding>
-                <marker date="1540548987963" expanded="true" signature="67:466" ph="SELECT `matc... tbl_match" />
-                <marker date="1540548987963" expanded="true" signature="67:475" ph="SELECT `matc... tbl_match" />
-                <marker date="1540548987963" expanded="true" signature="67:502" ph="SELECT `matc... tbl_match" />
-                <marker date="1540548987963" expanded="true" signature="67:503" ph="SELECT `matc... tbl_match" />
+                <marker date="1540578584243" expanded="true" signature="67:128" ph="SELECT `matc... tbl_match" />
               </folding>
             </state>
           </provider>
@@ -79,6 +77,9 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -117,25 +118,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="PHP_TOTO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP_TOTO" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="MyToto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyToto" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/Radius College/P5/Project Barroc-IT/BarrocIT" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -166,11 +167,12 @@
       <workItem from="1540540294669" duration="6948000" />
       <workItem from="1540569840823" duration="106000" />
       <workItem from="1540573877568" duration="653000" />
+      <workItem from="1540577901905" duration="683000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8833000" />
+    <option name="totallyTimeSpent" value="9516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -181,12 +183,12 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -219,9 +221,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oefTemplate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
-            <marker date="1540542139009" expanded="true" signature="1094:1118" ph="SELECT * FRO... tbl_menu" />
+            <marker date="1540578584243" expanded="true" signature="67:128" ph="SELECT `matc... tbl_match" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -254,10 +304,7 @@
         <state relative-caret-position="238">
           <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
-            <marker date="1540548987963" expanded="true" signature="67:466" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:475" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:502" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:503" ph="SELECT `matc... tbl_match" />
+            <marker date="1540578584243" expanded="true" signature="67:128" ph="SELECT `matc... tbl_match" />
           </folding>
         </state>
       </provider>
@@ -274,9 +321,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <marker date="1540542139009" expanded="true" signature="1094:1118" ph="SELECT * FRO... tbl_menu" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -301,10 +346,7 @@
         <state relative-caret-position="646">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <marker date="1540548987963" expanded="true" signature="67:466" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:475" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:502" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:503" ph="SELECT `matc... tbl_match" />
+            <marker date="1540578584243" expanded="true" signature="67:128" ph="SELECT `matc... tbl_match" />
           </folding>
         </state>
       </provider>
@@ -329,9 +371,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <marker date="1540542139009" expanded="true" signature="1094:1118" ph="SELECT * FRO... tbl_menu" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -364,10 +404,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
           <folding>
-            <marker date="1540548987963" expanded="true" signature="67:466" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:475" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:502" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:503" ph="SELECT `matc... tbl_match" />
+            <marker date="1540578584243" expanded="true" signature="67:128" ph="SELECT `matc... tbl_match" />
           </folding>
         </state>
       </provider>
@@ -408,21 +445,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <marker date="1540542139009" expanded="true" signature="1094:1118" ph="SELECT * FRO... tbl_menu" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oefTemplate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        <state relative-caret-position="540">
+          <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
           <folding>
-            <marker date="1540548987963" expanded="true" signature="67:466" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:475" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:502" ph="SELECT `matc... tbl_match" />
-            <marker date="1540548987963" expanded="true" signature="67:503" ph="SELECT `matc... tbl_match" />
+            <marker date="1540578584243" expanded="true" signature="67:128" ph="SELECT `matc... tbl_match" />
           </folding>
         </state>
       </provider>
