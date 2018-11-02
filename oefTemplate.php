@@ -68,8 +68,47 @@ $result = $conn->query($sql);
             }
             $conn->close();
             ?>
-          
+
       </table>
+
+        <?php
+
+        $conn = dbconnect();
+
+        $sql = "SELECT match_status, COUNT(*) AS aantal FROM tbl_match GROUP BY match_status";
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0)
+        {
+
+            while($row = $result->fetch_assoc())
+            {
+
+                echo "Gewonnen Wedstrijden: $row[aantal] <br>";
+
+                if ($result->num_rows > 0)
+                {
+
+                    while($row = $result->fetch_assoc())
+                    {
+
+                        echo  "Verloren Wedstrijden: $row[aantal]";
+
+                    }
+                } else
+                {
+                    echo "0 results";
+                }
+
+            }
+        } else
+        {
+            echo "0 results";
+        }
+        $conn->close();
+
+        ?>
 
     </div>
 
