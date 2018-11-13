@@ -122,8 +122,8 @@ CREATE TABLE `tbl_menu` (
 --
 
 INSERT INTO `tbl_menu` (`mn_id`, `mn_name`, `mn_link`, `mn_week`) VALUES
-(1, 'Begin', 'oefTemplate.php', 0),
-(3, 'Invoer', 'oefTemplate.php', 0);
+(1, 'Begin', 'myToto.php', 0),
+(3, 'Invoer', 'myToto.php', 0);
 
 --
 -- Indexen voor geëxporteerde tabellen

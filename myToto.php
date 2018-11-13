@@ -6,14 +6,15 @@ include 'header.php';
 $conn = dbconnect();
 
 $sql = "SELECT `match_date`, cl1.`club_id`, cl1.`club_name` AS home,\n"
-    . "        		cl2.club_id, cl2.`club_name` AS away, `match_home_goals`, `match_away_goals`, cmp1.competition_name, st.status, ef.effort, qu.quotation\n"
-    . "        		FROM tbl_match\n"
+    . "        		cl2.club_id, cl2.`club_name` AS away, `match_home_goals`, `match_away_goals`, cmp1.competition_name, st.status, ef.effort, qu.quotation, pr.prediction\n"
+    . "        		FROM tbl_matches\n"
     . "                JOIN tbl_clubs AS cl1 ON match_home_id = cl1.club_id\n"
     . "                JOIN tbl_clubs AS cl2 ON match_away_id = cl2.club_id\n"
     . "                JOIN tbl_competitions AS cmp1 ON match_competition = cmp1.competition_id\n"
-    . "                JOIN tbl_status AS st ON match_status = st.status_id\n"
-    . "                JOIN tbl_effort AS ef ON match_effort = ef.effort_id\n"
-    . "                JOIN tbl_quotation AS qu ON match_quotation = qu.quotation_id\n"
+    . "                JOIN tbl_statuses AS st ON match_status = st.status_id\n"
+    . "                JOIN tbl_efforts AS ef ON match_effort = ef.effort_id\n"
+    . "                JOIN tbl_quotations AS qu ON match_quotation = qu.quotation_id\n"
+    . "                JOIN tbl_predictions AS pr ON match_prediction = pr.prediction\n"
     . "                ORDER BY match_id ASC";
 
 $result = $conn->query($sql);
@@ -31,6 +32,7 @@ $result = $conn->query($sql);
                 <th scope="col">Score</th>
                 <th scope="col">Away</th>
                 <th scope="col">Competition</th>
+                <th scope="col">Prediction</th>
                 <th scope="col">Date</th>
                 <th scope="col">Effort</th>
                 <th scope="col">Quotation</th>
@@ -51,6 +53,8 @@ $result = $conn->query($sql);
                 echo "<td>";echo $row["away"];
                 echo "<td>";
                 echo $row["competition_name"];
+                echo "<td>";
+                echo $row["prediction"];
                 echo "<td>";
                 echo $row["match_date"];
                 echo "<td>";
@@ -75,7 +79,7 @@ $result = $conn->query($sql);
 
         $conn = dbconnect();
 
-        $sql = "SELECT match_status, COUNT(*) AS aantal FROM tbl_match GROUP BY match_status";
+        $sql = "SELECT match_status, COUNT(*) AS aantal FROM tbl_matches GROUP BY match_status";
 
         $result = $conn->query($sql);
 
@@ -85,7 +89,7 @@ $result = $conn->query($sql);
             while($row = $result->fetch_assoc())
             {
 
-                echo "Gewonnen Wedstrijden: $row[aantal] <br>";
+                echo "Bets won: $row[aantal] <br>";
 
                 if ($result->num_rows > 0)
                 {
@@ -93,7 +97,7 @@ $result = $conn->query($sql);
                     while($row = $result->fetch_assoc())
                     {
 
-                        echo  "Verloren Wedstrijden: $row[aantal]";
+                        echo  "Bets lost: $row[aantal]";
 
                     }
                 } else
@@ -109,6 +113,10 @@ $result = $conn->query($sql);
         $conn->close();
 
         ?>
+
+        <!-- SELECT SUM(quotation-effort) AS Opbrengst FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 1 GROUP BY match_status -->
+
+
 
     </div>
 

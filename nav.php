@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Toto Webpagina</a>
+      <a class="navbar-brand" href="#">Toto Webpage</a>
 	  
     </div>
 
@@ -22,7 +22,7 @@
 
 <?php
   $conn= dbconnect();
-  $sql  = "SELECT * FROM `tbl_menu`";
+  $sql  = "SELECT * FROM `tbl_menus`";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) 
       {
