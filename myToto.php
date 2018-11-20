@@ -117,6 +117,55 @@ $result = $conn->query($sql);
         <!-- SELECT SUM(quotation-effort) AS Opbrengst FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 1 GROUP BY match_status -->
 
 
+        <?php
+
+        $conn = dbconnect();
+
+        $sql = "SELECT SUM(quotation-effort) AS Opbrengst FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 1 GROUP BY match_status";
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0)
+        {
+
+            while($row = $result->fetch_assoc())
+            {
+                echo "<br> Total win: {$row['Opbrengst']} ";
+                
+            }
+        } else
+        {
+            echo "0 results";
+        }
+        $conn->close();
+
+        ?>
+
+        <?php
+
+        $conn = dbconnect();
+
+        $sql = "SELECT SUM(effort) AS Verlies FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 2";
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0)
+        {
+
+            while($row = $result->fetch_assoc())
+            {
+                echo "<br> Total lose: {$row['Verlies']} ";
+
+            }
+        } else
+        {
+            echo "0 results";
+        }
+        $conn->close();
+
+        ?>
+        
+        
 
     </div>
 

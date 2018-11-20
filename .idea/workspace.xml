@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49aca32b-4b1d-4d27-952c-f9afe7214cec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Database/mytoto.sql" afterPath="$PROJECT_DIR$/Database/mytoto.sql" />
-      <change beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
-      <change beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/nav.php" afterPath="$PROJECT_DIR$/nav.php" />
-      <change beforePath="$PROJECT_DIR$/oefTemplate.php" afterPath="$PROJECT_DIR$/myToto.php" />
+      <change beforePath="$PROJECT_DIR$/myToto.php" afterPath="$PROJECT_DIR$/myToto.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,10 +39,13 @@
       <file leaf-file-name="myToto.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myToto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="93" column="40" lean-forward="true" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+            <state relative-caret-position="731">
+              <caret line="156" column="37" lean-forward="false" selection-start-line="156" selection-start-column="37" selection-end-line="156" selection-end-column="37" />
               <folding>
-                <marker date="1542113591907" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+                <marker date="1542724974342" expanded="true" signature="2623:2630" ph="SELECT SUM(q... tbl_matches" />
+                <marker date="1542724974342" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+                <marker date="1542724974342" expanded="true" signature="3640:3856" ph="SELECT SUM(q... tbl_matches" />
+                <marker date="1542724974342" expanded="true" signature="4263:4445" ph="SELECT SUM(e... tbl_matches" />
               </folding>
             </state>
           </provider>
@@ -108,6 +106,7 @@
         <option value="$PROJECT_DIR$/nav.php" />
         <option value="$PROJECT_DIR$/oefTemplate.php" />
         <option value="$PROJECT_DIR$/Database/mytoto.sql" />
+        <option value="$PROJECT_DIR$/myToto.php" />
       </list>
     </option>
   </component>
@@ -118,7 +117,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1040" />
@@ -154,8 +153,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,34 +196,35 @@
       <workItem from="1541073054591" duration="6353000" />
       <workItem from="1541146801473" duration="4938000" />
       <workItem from="1541496685477" duration="1834000" />
-      <workItem from="1542109581803" duration="4181000" />
+      <workItem from="1542109581803" duration="4279000" />
+      <workItem from="1542713088242" duration="624000" />
+      <workItem from="1542722728112" duration="2043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29339000" />
+    <option name="totallyTimeSpent" value="32104000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -276,7 +276,10 @@
         <state relative-caret-position="1309">
           <caret line="77" column="20" lean-forward="false" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
           <folding>
-            <marker date="1542113591907" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="2623:2630" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="3640:3856" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="4263:4445" ph="SELECT SUM(e... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -304,7 +307,10 @@
         <state relative-caret-position="459">
           <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding>
-            <marker date="1542113591907" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="2623:2630" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="3640:3856" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="4263:4445" ph="SELECT SUM(e... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -364,7 +370,10 @@
         <state relative-caret-position="459">
           <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding>
-            <marker date="1542113591907" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="2623:2630" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="3640:3856" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="4263:4445" ph="SELECT SUM(e... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -448,7 +457,10 @@
         <state relative-caret-position="221">
           <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
-            <marker date="1542113591907" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="2623:2630" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="3640:3856" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="4263:4445" ph="SELECT SUM(e... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -500,7 +512,10 @@
         <state relative-caret-position="238">
           <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
-            <marker date="1542113591907" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="2623:2630" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="3640:3856" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="4263:4445" ph="SELECT SUM(e... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -544,7 +559,10 @@
         <state relative-caret-position="646">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <marker date="1542113591907" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="2623:2630" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="3640:3856" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="4263:4445" ph="SELECT SUM(e... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -604,7 +622,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
           <folding>
-            <marker date="1542113591907" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="2623:2630" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="3640:3856" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="4263:4445" ph="SELECT SUM(e... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -663,16 +684,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
           <caret line="140" column="22" lean-forward="true" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myToto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="93" column="40" lean-forward="true" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+        <state relative-caret-position="731">
+          <caret line="156" column="37" lean-forward="false" selection-start-line="156" selection-start-column="37" selection-end-line="156" selection-end-column="37" />
           <folding>
-            <marker date="1542113591907" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="2623:2630" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="2623:2701" ph="SELECT match... tbl_match" />
+            <marker date="1542724974342" expanded="true" signature="3640:3856" ph="SELECT SUM(q... tbl_matches" />
+            <marker date="1542724974342" expanded="true" signature="4263:4445" ph="SELECT SUM(e... tbl_matches" />
           </folding>
         </state>
       </provider>
