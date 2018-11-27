@@ -5,3 +5,12 @@
 .col-md-12 td {
     text-align: center;
 }
+
+.navbar-header .navbar-brand {
+    color: #227D38;
+    font-weight: 600;
+}
+
+.navbar-brand span {
+    color: #ffffff;
+}

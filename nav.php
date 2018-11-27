@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Toto Webpage</a>
+      <a class="navbar-brand" href="#">MyToto</a>
 	  
     </div>
 

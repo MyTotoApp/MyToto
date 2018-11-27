@@ -79,6 +79,30 @@ $result = $conn->query($sql);
 
         $conn = dbconnect();
 
+        $sql = "SELECT match_id, COUNT(*) AS Aantal FROM `tbl_matches`";
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0)
+        {
+
+            while($row = $result->fetch_assoc())
+            {
+                echo "<br> Total bets: {$row['Aantal']} <br>";
+
+            }
+        } else
+        {
+            echo "0 results";
+        }
+        $conn->close();
+
+        ?>
+
+        <?php
+
+        $conn = dbconnect();
+
         $sql = "SELECT match_status, COUNT(*) AS aantal FROM tbl_matches GROUP BY match_status";
 
         $result = $conn->query($sql);
@@ -114,9 +138,6 @@ $result = $conn->query($sql);
 
         ?>
 
-        <!-- SELECT SUM(quotation-effort) AS Opbrengst FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 1 GROUP BY match_status -->
-
-
         <?php
 
         $conn = dbconnect();
@@ -130,7 +151,8 @@ $result = $conn->query($sql);
 
             while($row = $result->fetch_assoc())
             {
-                echo "<br> Total win: {$row['Opbrengst']} ";
+                $opbrengst = $row['Opbrengst'];
+                echo "<br> Total win: $opbrengst ";
                 
             }
         } else
@@ -154,7 +176,9 @@ $result = $conn->query($sql);
 
             while($row = $result->fetch_assoc())
             {
-                echo "<br> Total lose: {$row['Verlies']} ";
+                $verlies = $row['Verlies'];
+                echo "<br> Total lose: $verlies ";
+
 
             }
         } else
@@ -164,8 +188,16 @@ $result = $conn->query($sql);
         $conn->close();
 
         ?>
-        
-        
+
+        <?php
+
+        $win = $opbrengst - $verlies;
+
+        echo "<br> Total winst: $win";
+
+        ?>
+
+
 
     </div>
 
