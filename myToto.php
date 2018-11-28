@@ -170,8 +170,6 @@ $result = $conn->query($sql);
 
         $Winpercentage = $Betswon / $Totalbets * 100;
 
-        $conn->close();
-
         ?>
 
     </div>
@@ -182,7 +180,7 @@ $result = $conn->query($sql);
 
             <thead>
             <tr>
-                <th colspan="2"> MyToto Statistics</th>
+                <th colspan="2">Bet Statistics</th>
             </tr>
             </thead>
 
@@ -225,8 +223,175 @@ $result = $conn->query($sql);
             ?>
 
         </table>
+      </div>
+
+
+
+      <div class="col-md-3">
+
+          <table class="table table-bordered table-hover">
+
+              <thead>
+              <tr>
+                  <th colspan="2">Bets per Competition</th>
+              </tr>
+              </thead>
+
+          <?php
+
+
+          $sql = "SELECT competition_name, COUNT(*) AS Aantal FROM `tbl_matches` INNER JOIN tbl_competitions ON match_competition = competition_id GROUP BY match_competition ORDER BY Aantal DESC";
+
+          $result = $conn->query($sql);
+
+          if ($result->num_rows > 0)
+
+          {
+
+            while($row = $result->fetch_assoc())
+            {
+
+                echo "<tr><td>";
+                echo $row["competition_name"];
+                echo "<td>";
+                echo $row["Aantal"];
+
+            }
+          }else{
+
+            echo "0 results";
+
+          }
+
+          ?>
+
+          </table>
 
       </div>
+
+
+      <div class="col-md-3">
+
+          <table class="table table-bordered table-hover">
+
+              <thead>
+              <tr>
+                  <th colspan="2">Bets per Month</th>
+              </tr>
+              </thead>
+
+              <?php
+
+              // September
+
+              $sql = "SELECT *, COUNT(*) AS September FROM `tbl_matches` WHERE match_date BETWEEN '2018-09-01' AND '2018-09-30'";
+
+              $result = $conn->query($sql);
+
+              if ($result->num_rows > 0)
+
+              {
+
+                  while($row = $result->fetch_assoc())
+                  {
+                      $September = $row['September'];
+                  }
+              }else{
+
+                  echo "0 results";
+
+              }
+
+              // Oktober
+
+              $sql = "SELECT *, COUNT(*) AS Oktober FROM `tbl_matches` WHERE match_date BETWEEN '2018-10-01' AND '2018-10-31'";
+
+              $result = $conn->query($sql);
+
+              if ($result->num_rows > 0)
+
+              {
+
+                  while($row = $result->fetch_assoc())
+                  {
+                      $Oktober = $row['Oktober'];
+                  }
+              }else{
+
+                  echo "0 results";
+
+              }
+
+              // November
+
+              $sql = "SELECT *, COUNT(*) AS November FROM `tbl_matches` WHERE match_date BETWEEN '2018-11-01' AND '2018-11-30'";
+
+              $result = $conn->query($sql);
+
+              if ($result->num_rows > 0)
+
+              {
+
+                  while($row = $result->fetch_assoc())
+                  {
+                      $November = $row['November'];
+                  }
+              }else{
+
+                  echo "0 results";
+
+              }
+
+              // December
+
+              $sql = "SELECT *, COUNT(*) AS December FROM `tbl_matches` WHERE match_date BETWEEN '2018-12-01' AND '2018-12-31'";
+
+              $result = $conn->query($sql);
+
+              if ($result->num_rows > 0)
+
+              {
+
+                  while($row = $result->fetch_assoc())
+                  {
+                      $December = $row['December'];
+                  }
+              }else{
+
+                  echo "0 results";
+
+              }
+
+              $conn->close();
+
+              echo "<tr><td>";
+              echo "September";
+              echo "<td>";
+              echo $September;
+
+              echo "<tr><td>";
+              echo "Oktober";
+              echo "<td>";
+              echo $Oktober;
+
+              echo "<tr><td>";
+              echo "November";
+              echo "<td>";
+              echo $November;
+
+              echo "<tr><td>";
+              echo "December";
+              echo "<td>";
+              echo $December;
+
+              ?>
+
+
+
+          </table>
+
+      </div>
+
 
     </div>
   </div>
