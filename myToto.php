@@ -5,7 +5,7 @@ include 'header.php';
 <?php
 $conn = dbconnect();
 
-$sql = "SELECT `match_date`, cl1.`club_id`, cl1.`club_name` AS home,\n"
+$sql = "SELECT DATE_FORMAT(`match_date`, '%d-%m-%Y') AS match_date, cl1.`club_id`, cl1.`club_name` AS home,\n"
     . "        		cl2.club_id, cl2.`club_name` AS away, `match_home_goals`, `match_away_goals`, cmp1.competition_name, st.status, ef.effort, qu.quotation, pr.prediction\n"
     . "        		FROM tbl_matches\n"
     . "                JOIN tbl_clubs AS cl1 ON match_home_id = cl1.club_id\n"
@@ -70,12 +70,14 @@ $result = $conn->query($sql);
             {
               echo "0 results";
             }
-            $conn->close();
+
             ?>
 
       </table>
 
         <?php
+
+        // Totaal weddenschappen
 
         $conn = dbconnect();
 
@@ -88,20 +90,14 @@ $result = $conn->query($sql);
 
             while($row = $result->fetch_assoc())
             {
-                echo "<br> Total bets: {$row['Aantal']} <br>";
-
+                $Totalbets = $row['Aantal'];
             }
         } else
         {
             echo "0 results";
         }
-        $conn->close();
 
-        ?>
-
-        <?php
-
-        $conn = dbconnect();
+        // Totaal weddenschappen gewonnen & verloren
 
         $sql = "SELECT match_status, COUNT(*) AS aantal FROM tbl_matches GROUP BY match_status";
 
@@ -112,17 +108,14 @@ $result = $conn->query($sql);
 
             while($row = $result->fetch_assoc())
             {
-
-                echo "Bets won: $row[aantal] <br>";
+                $Betswon = $row['aantal'];
 
                 if ($result->num_rows > 0)
                 {
 
                     while($row = $result->fetch_assoc())
                     {
-
-                        echo  "Bets lost: $row[aantal]";
-
+                        $Betslost = $row['aantal'];
                     }
                 } else
                 {
@@ -134,13 +127,8 @@ $result = $conn->query($sql);
         {
             echo "0 results";
         }
-        $conn->close();
 
-        ?>
-
-        <?php
-
-        $conn = dbconnect();
+        // Totaal aantal win
 
         $sql = "SELECT SUM(quotation-effort) AS Opbrengst FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 1 GROUP BY match_status";
 
@@ -151,21 +139,14 @@ $result = $conn->query($sql);
 
             while($row = $result->fetch_assoc())
             {
-                $opbrengst = $row['Opbrengst'];
-                echo "<br> Total win: $opbrengst ";
-                
+                $Totalwin = $row['Opbrengst'];
             }
         } else
         {
             echo "0 results";
         }
-        $conn->close();
 
-        ?>
-
-        <?php
-
-        $conn = dbconnect();
+        // Totaal aantal verlies
 
         $sql = "SELECT SUM(effort) AS Verlies FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 2";
 
@@ -176,30 +157,76 @@ $result = $conn->query($sql);
 
             while($row = $result->fetch_assoc())
             {
-                $verlies = $row['Verlies'];
-                echo "<br> Total lose: $verlies ";
-
-
+                $Totallose = $row['Verlies'];
             }
         } else
         {
             echo "0 results";
         }
+
+        // Totaal winst & winpercentage
+
+        $Income = $Totalwin - $Totallose;
+
+        $Winpercentage = $Betswon / $Totalbets * 100;
+
         $conn->close();
 
         ?>
 
-        <?php
-
-        $win = $opbrengst - $verlies;
-
-        echo "<br> Total winst: $win";
-
-        ?>
-
-
-
     </div>
+
+      <div class="col-md-3">
+
+        <table class="table table-bordered table-hover">
+
+            <thead>
+            <tr>
+                <th colspan="2"> MyToto Statistics</th>
+            </tr>
+            </thead>
+
+            <?php
+                    echo "<tr><td>";
+                    echo "Bets:";
+                    echo "<td>";
+                    echo $Totalbets;
+
+                    echo "<tr><td>";
+                    echo "Bets won:";
+                    echo "<td>";
+                    echo $Betswon;
+
+                    echo "<tr><td>";
+                    echo "Bets lost:";
+                    echo "<td>";
+                    echo $Betslost;
+
+                    echo "<tr><td>";
+                    echo "Win percentage:";
+                    echo "<td>";
+                    echo "$Winpercentage%";
+
+                    echo "<tr><td>";
+                    echo "Total win:";
+                    echo "<td>";
+                    echo "€ $Totalwin";
+
+                    echo "<tr><td>";
+                    echo "Total lost:";
+                    echo "<td>";
+                    echo "€ $Totallose";
+
+                    echo "<tr><td>";
+                    echo "Income:";
+                    echo "<td>";
+                    echo "€ $Income";
+
+            ?>
+
+        </table>
+
+      </div>
 
     </div>
   </div>

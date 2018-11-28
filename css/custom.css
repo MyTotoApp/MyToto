@@ -14,3 +14,7 @@
 .navbar-brand span {
     color: #ffffff;
 }
+
+.col-md-3 th {
+    text-align: center;
+}
