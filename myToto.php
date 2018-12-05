@@ -3,21 +3,23 @@ include 'header.php';
 ?>
 
 <?php
+
+// https://www.youtube.com/watch?v=nBE_DxxUXJs
+
 $conn = dbconnect();
 
-$sql = "SELECT DATE_FORMAT(`match_date`, '%d-%m-%Y') AS match_date, cl1.`club_id`, cl1.`club_name` AS home,\n"
-    . "        		cl2.club_id, cl2.`club_name` AS away, `match_home_goals`, `match_away_goals`, cmp1.competition_name, st.status, ef.effort, qu.quotation, pr.prediction\n"
-    . "        		FROM tbl_matches\n"
-    . "                JOIN tbl_clubs AS cl1 ON match_home_id = cl1.club_id\n"
-    . "                JOIN tbl_clubs AS cl2 ON match_away_id = cl2.club_id\n"
-    . "                JOIN tbl_competitions AS cmp1 ON match_competition = cmp1.competition_id\n"
-    . "                JOIN tbl_statuses AS st ON match_status = st.status_id\n"
-    . "                JOIN tbl_efforts AS ef ON match_effort = ef.effort_id\n"
-    . "                JOIN tbl_quotations AS qu ON match_quotation = qu.quotation_id\n"
-    . "                JOIN tbl_predictions AS pr ON match_prediction = pr.prediction\n"
-    . "                ORDER BY match_id ASC";
+$user = $_POST['user'];
+
+$sql = "SELECT DISTINCT match_user, user_firstname\n"
+
+    . "FROM `tbl_matches`\n"
+
+    . "INNER JOIN tbl_users ON match_user = user_id\n"
+
+    . "WHERE match_user = $user";
 
 $result = $conn->query($sql);
+
 
 ?>
 
@@ -27,25 +29,67 @@ $result = $conn->query($sql);
       <table class="table table-bordered table-hover">
 
           <thead>
-            <tr>
+
+          <th colspan="10">
+
+    <?php     if ($result->num_rows > 0)
+              {
+
+              while($row = $result->fetch_assoc())
+              {
+                  echo $row["user_firstname"];
+              }
+              } else {
+              echo "0 results";
+              }
+
+              ?>
+
+              <tr>
                 <th scope="col">Home</th>
                 <th scope="col">Score</th>
                 <th scope="col">Away</th>
                 <th scope="col">Competition</th>
                 <th scope="col">Prediction</th>
+                <th scope="col">Type</th>
                 <th scope="col">Date</th>
                 <th scope="col">Effort</th>
                 <th scope="col">Quotation</th>
                 <th scope="col">Status</th>
             </tr>
+
+
+          </th>
+
           </thead>
 
             <?php
+
+            $user = $_POST['user'];
+
+            $sql = "SELECT DATE_FORMAT(`match_date`, '%d-%m-%Y') AS match_date, cl1.`club_id`, cl1.`club_name` AS home,\n"
+                . "       		cl2.club_id, cl2.`club_name` AS away, `match_home_goals`, `match_away_goals`, cmp1.competition_name, st.status, ef.effort, qu.quotation, pr.prediction, us.user_firstname, ty.type_name\n"
+                . "        		FROM tbl_matches\n"
+                . "                JOIN tbl_clubs AS cl1 ON match_home_id = cl1.club_id\n"
+                . "                JOIN tbl_clubs AS cl2 ON match_away_id = cl2.club_id\n"
+                . "                JOIN tbl_competitions AS cmp1 ON match_competition = cmp1.competition_id\n"
+                . "                JOIN tbl_statuses AS st ON match_status = st.status_id\n"
+                . "                JOIN tbl_efforts AS ef ON match_effort = ef.effort_id\n"
+                . "                JOIN tbl_quotations AS qu ON match_quotation = qu.quotation_id\n"
+                . "                JOIN tbl_predictions AS pr ON match_prediction = pr.prediction_id\n"
+                . "                JOIN tbl_users AS us ON match_user = us.user_id\n"
+                . "                JOIN tbl_types AS ty ON match_type = ty.type_id\n"
+                . "                WHERE match_user = $user AND match_type = 1\n"
+                . "                ORDER BY match_id ASC";
+
+            $result = $conn->query($sql);
+
             if ($result->num_rows > 0)
             {
 
               while($row = $result->fetch_assoc())
               {
+
                 echo "<tr><td>";
                 echo $row["home"];
                 echo "<td>";
@@ -56,6 +100,8 @@ $result = $conn->query($sql);
                 echo "<td>";
                 echo $row["prediction"];
                 echo "<td>";
+                echo $row["type_name"];
+                echo "<td>";
                 echo $row["match_date"];
                 echo "<td>";
                 echo $row["effort"];
@@ -63,7 +109,6 @@ $result = $conn->query($sql);
                 echo $row["quotation"];
                 echo "<td>";
                 echo $row["status"];
-
 
                }
             } else
@@ -81,7 +126,7 @@ $result = $conn->query($sql);
 
         $conn = dbconnect();
 
-        $sql = "SELECT match_id, COUNT(*) AS Aantal FROM `tbl_matches`";
+        $sql = "SELECT match_id, COUNT(*) AS Aantal FROM `tbl_matches` WHERE match_user = $user";
 
         $result = $conn->query($sql);
 
@@ -99,7 +144,7 @@ $result = $conn->query($sql);
 
         // Totaal weddenschappen gewonnen & verloren
 
-        $sql = "SELECT match_status, COUNT(*) AS aantal FROM tbl_matches GROUP BY match_status";
+        $sql = "SELECT match_status, COUNT(*) AS aantal FROM tbl_matches  WHERE match_user = $user GROUP BY match_status";
 
         $result = $conn->query($sql);
 
@@ -130,7 +175,7 @@ $result = $conn->query($sql);
 
         // Totaal aantal win
 
-        $sql = "SELECT SUM(quotation-effort) AS Opbrengst FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 1 GROUP BY match_status";
+        $sql = "SELECT FORMAT(SUM(quotation*effort-effort), 2) AS Opbrengst FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 1 AND match_user = $user GROUP BY match_status";
 
         $result = $conn->query($sql);
 
@@ -148,7 +193,7 @@ $result = $conn->query($sql);
 
         // Totaal aantal verlies
 
-        $sql = "SELECT SUM(effort) AS Verlies FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 2";
+        $sql = "SELECT FORMAT(SUM(effort), 2) AS Verlies FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 2 AND match_user = $user";
 
         $result = $conn->query($sql);
 
@@ -203,7 +248,7 @@ $result = $conn->query($sql);
                     echo "<tr><td>";
                     echo "Win percentage:";
                     echo "<td>";
-                    echo "$Winpercentage%";
+                    echo number_format("$Winpercentage", 0) . "%";
 
                     echo "<tr><td>";
                     echo "Total win:";
@@ -240,7 +285,7 @@ $result = $conn->query($sql);
           <?php
 
 
-          $sql = "SELECT competition_name, COUNT(*) AS Aantal FROM `tbl_matches` INNER JOIN tbl_competitions ON match_competition = competition_id GROUP BY match_competition ORDER BY Aantal DESC";
+          $sql = "SELECT competition_name, COUNT(*) AS Aantal FROM `tbl_matches` INNER JOIN tbl_competitions ON match_competition = competition_id WHERE match_user = $user GROUP BY match_competition ORDER BY Aantal DESC";
 
           $result = $conn->query($sql);
 
@@ -284,7 +329,7 @@ $result = $conn->query($sql);
 
               // September
 
-              $sql = "SELECT *, COUNT(*) AS September FROM `tbl_matches` WHERE match_date BETWEEN '2018-09-01' AND '2018-09-30'";
+              $sql = "SELECT *, COUNT(*) AS September FROM `tbl_matches` WHERE match_date BETWEEN '2018-09-01' AND '2018-09-30' AND match_user = $user";
 
               $result = $conn->query($sql);
 
@@ -304,7 +349,7 @@ $result = $conn->query($sql);
 
               // Oktober
 
-              $sql = "SELECT *, COUNT(*) AS Oktober FROM `tbl_matches` WHERE match_date BETWEEN '2018-10-01' AND '2018-10-31'";
+              $sql = "SELECT *, COUNT(*) AS Oktober FROM `tbl_matches` WHERE match_date BETWEEN '2018-10-01' AND '2018-10-31' AND match_user = $user";
 
               $result = $conn->query($sql);
 
@@ -324,7 +369,7 @@ $result = $conn->query($sql);
 
               // November
 
-              $sql = "SELECT *, COUNT(*) AS November FROM `tbl_matches` WHERE match_date BETWEEN '2018-11-01' AND '2018-11-30'";
+              $sql = "SELECT *, COUNT(*) AS November FROM `tbl_matches` WHERE match_date BETWEEN '2018-11-01' AND '2018-11-30' AND match_user = $user";
 
               $result = $conn->query($sql);
 
@@ -344,7 +389,7 @@ $result = $conn->query($sql);
 
               // December
 
-              $sql = "SELECT *, COUNT(*) AS December FROM `tbl_matches` WHERE match_date BETWEEN '2018-12-01' AND '2018-12-31'";
+              $sql = "SELECT *, COUNT(*) AS December FROM `tbl_matches` WHERE match_date BETWEEN '2018-12-01' AND '2018-12-31' AND match_user = $user";
 
               $result = $conn->query($sql);
 
@@ -361,8 +406,6 @@ $result = $conn->query($sql);
                   echo "0 results";
 
               }
-
-              $conn->close();
 
               echo "<tr><td>";
               echo "September";
@@ -392,6 +435,61 @@ $result = $conn->query($sql);
 
       </div>
 
+
+
+      <div class="col-md-3">
+
+          <?php
+
+          $sql = "SELECT DISTINCT match_user, user_firstname FROM `tbl_matches` INNER JOIN tbl_users ON user_id = match_user";
+
+          $result = $conn->query($sql);
+
+          ?>
+
+          <form action="myToto.php" method="post">
+
+          <select name="user">
+
+          <?php
+
+          if ($result->num_rows > 0)
+
+          {
+
+              while($row = $result->fetch_assoc())
+              {
+
+                  ?>
+
+                  <option name="<?php $row['match_user']; ?>"><?php echo $row['match_user']; ?></option>
+
+        <?php }
+
+        ?>
+
+          </select>
+
+
+
+        <?php
+          } else
+
+          {
+              echo "0 results";
+          }
+
+          $conn->close();
+
+          //SELECT competition_name, match_status, COUNT(*) FROM `tbl_matches` INNER JOIN tbl_competitions on match_competition = competition_id WHERE match_competition = 4 AND match_user = $user GROUP BY match_status
+
+          ?>
+
+          <input type="submit" value="Select">
+
+          </form>
+
+      </div>
 
     </div>
   </div>
