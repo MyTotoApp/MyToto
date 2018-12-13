@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="49aca32b-4b1d-4d27-952c-f9afe7214cec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
       <change beforePath="$PROJECT_DIR$/myToto.php" afterPath="$PROJECT_DIR$/myToto.php" />
+      <change beforePath="$PROJECT_DIR$/selectUser.php" afterPath="$PROJECT_DIR$/selectUser.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,33 +19,31 @@
       <file leaf-file-name="myToto.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myToto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="370">
+              <caret line="112" column="51" lean-forward="true" selection-start-line="112" selection-start-column="51" selection-end-line="112" selection-end-column="51" />
               <folding>
-                <marker date="1543999598425" expanded="true" signature="799:844" ph="..." />
-                <marker date="1543999598425" expanded="true" signature="817:844" ph="..." />
-                <marker date="1543999598425" expanded="true" signature="3862:3936" ph="SELECT match... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="3862:3937" ph="SELECT match... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="4288:4392" ph="SELECT match... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="5027:5284" ph="SELECT FORMA... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="5613:5823" ph="SELECT FORMA... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="5613:5824" ph="SELECT FORMA... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="6376:6422" ph="..." />
-                <marker date="1543999598425" expanded="true" signature="6393:6422" ph="..." />
-                <marker date="1543999598425" expanded="true" signature="7725:7775" ph="..." />
-                <marker date="1543999598425" expanded="true" signature="7744:7775" ph="..." />
-                <marker date="1543999598425" expanded="true" signature="7886:8087" ph="SELECT compe... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="8629:8679" ph="..." />
-                <marker date="1543999598425" expanded="true" signature="8648:8679" ph="..." />
-                <marker date="1543999598425" expanded="true" signature="8819:8941" ph="SELECT *, CO... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="8819:8942" ph="SELECT *, CO... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="9328:9448" ph="SELECT *, CO... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="9328:9449" ph="SELECT *, CO... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="9832:9953" ph="SELECT *, CO... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="9832:9954" ph="SELECT *, CO... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="10339:10460" ph="SELECT *, CO... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="10339:10461" ph="SELECT *, CO... tbl_matches" />
-                <marker date="1543999598425" expanded="true" signature="11398:11504" ph="SELECT DISTI... tbl_matches" />
+                <marker date="1544713216147" expanded="true" signature="5701:5775" ph="SELECT match... tbl_matches" />
+                <marker date="1544713216147" expanded="true" signature="6231:6335" ph="SELECT match... tbl_matches" />
+                <marker date="1544713216147" expanded="true" signature="7631:7849" ph="SELECT FORMA... tbl_matches" />
+                <marker date="1544713216147" expanded="true" signature="8282:8448" ph="SELECT FORMA... tbl_matches" />
+                <marker date="1544713216147" expanded="true" signature="10784:10985" ph="SELECT compe... tbl_matches" />
+                <marker date="1544713216147" expanded="true" signature="11945:12068" ph="SELECT *, CO... tbl_matches" />
+                <marker date="1544713216147" expanded="true" signature="12526:12647" ph="SELECT *, CO... tbl_matches" />
+                <marker date="1544713216147" expanded="true" signature="13102:13224" ph="SELECT *, CO... tbl_matches" />
+                <marker date="1544713216147" expanded="true" signature="13681:13803" ph="SELECT *, CO... tbl_matches" />
+                <marker date="1544713216147" expanded="true" signature="14932:15038" ph="SELECT DISTI... tbl_matches" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insertToto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insertToto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding>
+                <marker date="1544005667707" expanded="true" signature="183:239" ph="SELECT club_... tbl_clubs" />
               </folding>
             </state>
           </provider>
@@ -52,10 +52,10 @@
       <file leaf-file-name="selectUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selectUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
-                <marker date="1543843148878" expanded="true" signature="207:313" ph="SELECT DISTI... tbl_matches" />
+                <marker date="1544004653762" expanded="true" signature="195:301" ph="SELECT DISTI... tbl_matches" />
               </folding>
             </state>
           </provider>
@@ -74,8 +74,8 @@
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="374">
+              <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -90,6 +90,7 @@
       <find>match_user = 2</find>
       <find>match_user =</find>
       <find>match_user</find>
+      <find>totalwin</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -107,11 +108,12 @@
         <option value="$PROJECT_DIR$/oefTemplate.php" />
         <option value="$PROJECT_DIR$/Database/mytoto.sql" />
         <option value="$PROJECT_DIR$/nav.php" />
-        <option value="$PROJECT_DIR$/css/custom.css" />
         <option value="$PROJECT_DIR$/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/DataController.php" />
         <option value="$PROJECT_DIR$/UserController.php" />
         <option value="$PROJECT_DIR$/selectUser.php" />
+        <option value="$PROJECT_DIR$/insertToto.php" />
+        <option value="$PROJECT_DIR$/css/custom.css" />
         <option value="$PROJECT_DIR$/myToto.php" />
       </list>
     </option>
@@ -143,7 +145,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,6 +157,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,28 +221,37 @@
       <workItem from="1543922636369" duration="45000" />
       <workItem from="1543930698555" duration="9000" />
       <workItem from="1543948410337" duration="614000" />
-      <workItem from="1543996907942" duration="2135000" />
+      <workItem from="1543996907942" duration="6322000" />
+      <workItem from="1544014053421" duration="373000" />
+      <workItem from="1544178059604" duration="2480000" />
+      <workItem from="1544431613124" duration="2997000" />
+      <workItem from="1544447929895" duration="1381000" />
+      <workItem from="1544457428189" duration="712000" />
+      <workItem from="1544465657432" duration="184000" />
+      <workItem from="1544514114548" duration="4464000" />
+      <workItem from="1544528088052" duration="51000" />
+      <workItem from="1544535954165" duration="791000" />
+      <workItem from="1544710323952" duration="2338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69338000" />
+    <option name="totallyTimeSpent" value="89296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -249,6 +260,26 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -261,39 +292,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myToto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="77" column="20" lean-forward="false" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
-          <folding>
-            <marker date="1543999598425" expanded="true" signature="799:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="817:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="3862:3936" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="3862:3937" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="4288:4392" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5027:5284" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5823" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5824" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="6376:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="6393:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7725:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7744:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7886:8087" ph="SELECT compe... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8629:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8648:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8819:8941" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8819:8942" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9448" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9449" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9953" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9954" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10460" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10461" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="11398:11504" ph="SELECT DISTI... tbl_matches" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -313,30 +311,16 @@
         <state relative-caret-position="459">
           <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding>
-            <marker date="1543999598425" expanded="true" signature="799:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="817:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="3862:3936" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="3862:3937" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="4288:4392" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5027:5284" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5823" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5824" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="6376:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="6393:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7725:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7744:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7886:8087" ph="SELECT compe... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8629:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8648:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8819:8941" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8819:8942" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9448" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9449" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9953" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9954" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10460" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10461" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="11398:11504" ph="SELECT DISTI... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="5701:5775" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="6231:6335" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="7631:7849" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="8282:8448" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="10784:10985" ph="SELECT compe... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="11945:12068" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="12526:12647" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13102:13224" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13681:13803" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="14932:15038" ph="SELECT DISTI... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -390,30 +374,16 @@
         <state relative-caret-position="459">
           <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding>
-            <marker date="1543999598425" expanded="true" signature="799:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="817:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="3862:3936" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="3862:3937" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="4288:4392" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5027:5284" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5823" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5824" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="6376:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="6393:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7725:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7744:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7886:8087" ph="SELECT compe... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8629:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8648:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8819:8941" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8819:8942" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9448" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9449" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9953" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9954" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10460" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10461" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="11398:11504" ph="SELECT DISTI... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="5701:5775" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="6231:6335" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="7631:7849" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="8282:8448" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="10784:10985" ph="SELECT compe... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="11945:12068" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="12526:12647" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13102:13224" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13681:13803" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="14932:15038" ph="SELECT DISTI... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -489,30 +459,16 @@
         <state relative-caret-position="221">
           <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
-            <marker date="1543999598425" expanded="true" signature="799:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="817:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="3862:3936" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="3862:3937" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="4288:4392" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5027:5284" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5823" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5824" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="6376:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="6393:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7725:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7744:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7886:8087" ph="SELECT compe... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8629:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8648:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8819:8941" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8819:8942" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9448" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9449" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9953" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9954" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10460" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10461" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="11398:11504" ph="SELECT DISTI... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="5701:5775" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="6231:6335" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="7631:7849" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="8282:8448" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="10784:10985" ph="SELECT compe... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="11945:12068" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="12526:12647" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13102:13224" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13681:13803" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="14932:15038" ph="SELECT DISTI... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -558,30 +514,16 @@
         <state relative-caret-position="238">
           <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
-            <marker date="1543999598425" expanded="true" signature="799:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="817:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="3862:3936" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="3862:3937" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="4288:4392" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5027:5284" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5823" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5824" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="6376:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="6393:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7725:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7744:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7886:8087" ph="SELECT compe... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8629:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8648:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8819:8941" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8819:8942" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9448" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9449" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9953" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9954" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10460" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10461" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="11398:11504" ph="SELECT DISTI... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="5701:5775" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="6231:6335" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="7631:7849" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="8282:8448" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="10784:10985" ph="SELECT compe... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="11945:12068" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="12526:12647" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13102:13224" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13681:13803" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="14932:15038" ph="SELECT DISTI... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -620,30 +562,16 @@
         <state relative-caret-position="646">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <marker date="1543999598425" expanded="true" signature="799:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="817:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="3862:3936" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="3862:3937" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="4288:4392" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5027:5284" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5823" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5824" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="6376:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="6393:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7725:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7744:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7886:8087" ph="SELECT compe... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8629:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8648:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8819:8941" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8819:8942" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9448" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9449" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9953" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9954" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10460" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10461" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="11398:11504" ph="SELECT DISTI... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="5701:5775" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="6231:6335" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="7631:7849" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="8282:8448" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="10784:10985" ph="SELECT compe... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="11945:12068" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="12526:12647" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13102:13224" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13681:13803" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="14932:15038" ph="SELECT DISTI... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -696,30 +624,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
           <folding>
-            <marker date="1543999598425" expanded="true" signature="799:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="817:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="3862:3936" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="3862:3937" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="4288:4392" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5027:5284" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5823" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5824" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="6376:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="6393:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7725:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7744:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7886:8087" ph="SELECT compe... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8629:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8648:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8819:8941" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8819:8942" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9448" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9449" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9953" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9954" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10460" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10461" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="11398:11504" ph="SELECT DISTI... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="5701:5775" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="6231:6335" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="7631:7849" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="8282:8448" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="10784:10985" ph="SELECT compe... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="11945:12068" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="12526:12647" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13102:13224" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13681:13803" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="14932:15038" ph="SELECT DISTI... tbl_matches" />
           </folding>
         </state>
       </provider>
@@ -769,6 +683,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/selectUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <marker date="1544004653762" expanded="true" signature="195:301" ph="SELECT DISTI... tbl_matches" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insertToto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <marker date="1544005667707" expanded="true" signature="183:239" ph="SELECT club_... tbl_clubs" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -777,53 +719,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selectUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <marker date="1543843148878" expanded="true" signature="207:313" ph="SELECT DISTI... tbl_matches" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myToto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="370">
+          <caret line="112" column="51" lean-forward="true" selection-start-line="112" selection-start-column="51" selection-end-line="112" selection-end-column="51" />
           <folding>
-            <marker date="1543999598425" expanded="true" signature="799:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="817:844" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="3862:3936" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="3862:3937" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="4288:4392" ph="SELECT match... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5027:5284" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5823" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="5613:5824" ph="SELECT FORMA... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="6376:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="6393:6422" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7725:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7744:7775" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="7886:8087" ph="SELECT compe... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8629:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8648:8679" ph="..." />
-            <marker date="1543999598425" expanded="true" signature="8819:8941" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="8819:8942" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9448" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9328:9449" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9953" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="9832:9954" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10460" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="10339:10461" ph="SELECT *, CO... tbl_matches" />
-            <marker date="1543999598425" expanded="true" signature="11398:11504" ph="SELECT DISTI... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="5701:5775" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="6231:6335" ph="SELECT match... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="7631:7849" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="8282:8448" ph="SELECT FORMA... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="10784:10985" ph="SELECT compe... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="11945:12068" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="12526:12647" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13102:13224" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="13681:13803" ph="SELECT *, CO... tbl_matches" />
+            <marker date="1544713216147" expanded="true" signature="14932:15038" ph="SELECT DISTI... tbl_matches" />
           </folding>
         </state>
       </provider>

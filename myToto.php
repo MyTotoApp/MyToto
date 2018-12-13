@@ -20,216 +20,257 @@ $sql = "SELECT DISTINCT match_user, user_firstname\n"
 
 $result = $conn->query($sql);
 
-
 ?>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <table class="table table-bordered table-hover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered table-hover">
 
-          <thead>
+                    <thead>
 
-          <th colspan="10">
+                        <th colspan="10">
 
-    <?php     if ($result->num_rows > 0)
-              {
+                            <?php
 
-              while($row = $result->fetch_assoc())
-              {
-                  echo $row["user_firstname"];
-              }
-              } else {
-              echo "0 results";
-              }
+                            if ($result->num_rows > 0)
+                            {
+                                while($row = $result->fetch_assoc())
+                                {
+                                    echo $row["user_firstname"];
+                                }
 
-              ?>
+                            } else
+                            {
+                                echo "0 results";
+                            }
 
-              <tr>
-                <th scope="col">Home</th>
-                <th scope="col">Score</th>
-                <th scope="col">Away</th>
-                <th scope="col">Competition</th>
-                <th scope="col">Prediction</th>
-                <th scope="col">Type</th>
-                <th scope="col">Date</th>
-                <th scope="col">Effort</th>
-                <th scope="col">Quotation</th>
-                <th scope="col">Status</th>
-            </tr>
+                            ?>
 
+                            <tr>
 
-          </th>
+                                <th scope="col">Home</th>
+                                <th scope="col">Score</th>
+                                <th scope="col">Away</th>
+                                <th scope="col">Competition</th>
+                                <th scope="col">Prediction</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Effort</th>
+                                <th scope="col">Quotation</th>
+                                <th scope="col">Status</th>
 
-          </thead>
+                            </tr>
 
-            <?php
+                        </th>
 
-            $user = $_POST['user'];
+                    </thead>
 
-            $sql = "SELECT DATE_FORMAT(`match_date`, '%d-%m-%Y') AS match_date, cl1.`club_id`, cl1.`club_name` AS home,\n"
-                . "       		cl2.club_id, cl2.`club_name` AS away, `match_home_goals`, `match_away_goals`, cmp1.competition_name, st.status, ef.effort, qu.quotation, pr.prediction, us.user_firstname, ty.type_name\n"
-                . "        		FROM tbl_matches\n"
-                . "                JOIN tbl_clubs AS cl1 ON match_home_id = cl1.club_id\n"
-                . "                JOIN tbl_clubs AS cl2 ON match_away_id = cl2.club_id\n"
-                . "                JOIN tbl_competitions AS cmp1 ON match_competition = cmp1.competition_id\n"
-                . "                JOIN tbl_statuses AS st ON match_status = st.status_id\n"
-                . "                JOIN tbl_efforts AS ef ON match_effort = ef.effort_id\n"
-                . "                JOIN tbl_quotations AS qu ON match_quotation = qu.quotation_id\n"
-                . "                JOIN tbl_predictions AS pr ON match_prediction = pr.prediction_id\n"
-                . "                JOIN tbl_users AS us ON match_user = us.user_id\n"
-                . "                JOIN tbl_types AS ty ON match_type = ty.type_id\n"
-                . "                WHERE match_user = $user AND match_type = 1\n"
-                . "                ORDER BY match_id ASC";
+                    <?php
 
-            $result = $conn->query($sql);
+                    $user = $_POST['user'];
 
-            if ($result->num_rows > 0)
-            {
+                    $sql = "SELECT DATE_FORMAT(`match_date`, '%d-%m-%Y') AS match_date, match_double_id, cl1.`club_id`, cl1.`club_name` AS home,\n"
+                        . "       		cl2.club_id, cl2.`club_name` AS away, `match_home_goals`, `match_away_goals`, match_effort, cmp1.competition_name, st.status, qu.quotation, pr.prediction, us.user_firstname, ty.type_name\n"
+                        . "        		FROM tbl_matches\n"
+                        . "                JOIN tbl_clubs AS cl1 ON match_home_id = cl1.club_id\n"
+                        . "                JOIN tbl_clubs AS cl2 ON match_away_id = cl2.club_id\n"
+                        . "                JOIN tbl_competitions AS cmp1 ON match_competition = cmp1.competition_id\n"
+                        . "                JOIN tbl_statuses AS st ON match_status = st.status_id\n"
+                        . "                JOIN tbl_quotations AS qu ON match_quotation = qu.quotation_id\n"
+                        . "                JOIN tbl_predictions AS pr ON match_prediction = pr.prediction_id\n"
+                        . "                JOIN tbl_users AS us ON match_user = us.user_id\n"
+                        . "                JOIN tbl_types AS ty ON match_type = ty.type_id\n"
+                        . "                WHERE match_user = $user\n"
+                        . "                ORDER BY match_id ASC";
 
-              while($row = $result->fetch_assoc())
-              {
+                    $result = $conn->query($sql);
 
-                echo "<tr><td>";
-                echo $row["home"];
-                echo "<td>";
-                echo $row["match_home_goals"] . ' - ' .  $row["match_away_goals"];
-                echo "<td>";echo $row["away"];
-                echo "<td>";
-                echo $row["competition_name"];
-                echo "<td>";
-                echo $row["prediction"];
-                echo "<td>";
-                echo $row["type_name"];
-                echo "<td>";
-                echo $row["match_date"];
-                echo "<td>";
-                echo $row["effort"];
-                echo "<td>";
-                echo $row["quotation"];
-                echo "<td>";
-                echo $row["status"];
+                    if ($result->num_rows > 0)
+                    {
 
-               }
-            } else
-            {
-              echo "0 results";
-            }
+                        while($row = $result->fetch_assoc())
+                        {
 
-            ?>
+                            if ($row['match_double_id'] != "0" )
+                            {
+                                echo "<tr class='double'><td>";
+                            }
 
-      </table>
+                            else {
+                                echo "<tr><td>";
+                            }
 
-        <?php
+                            echo $row["home"];
+                            echo "<td>";
+                            echo $row["match_home_goals"] . ' - ' .  $row["match_away_goals"];
+                            echo "<td>";echo $row["away"];
+                            echo "<td>";
+                            echo $row["competition_name"];
+                            echo "<td>";
+                            echo $row["prediction"];
+                            echo "<td>";
+                            echo $row["type_name"];
+                            echo "<td>";
+                            echo $row["match_date"];
 
-        // Totaal weddenschappen
+                            if ($row['match_double_id'] != "0" )
+                                {
+                                    echo "<td rowspan ='2'>";
+                                    echo $row["match_effort"];
+                                } else
+                                {
+                                    echo "<td>";
+                                    echo $row["match_effort"];
+                                }
 
-        $conn = dbconnect();
+                            echo "<td>";
+                            echo $row["quotation"];
 
-        $sql = "SELECT match_id, COUNT(*) AS Aantal FROM `tbl_matches` WHERE match_user = $user";
+                            if ($row['match_double_id'] != "0" )
+                                {
+                                    echo "<td rowspan ='2'>";
+                                    echo $row["status"];
+                                } else
+                                {
+                                    echo "<td>";
+                                    echo $row["status"];
+                                }
+                        }
+                    } else
+                    {
+                        echo "0 results";
+                    }
 
-        $result = $conn->query($sql);
+                    ?>
 
-        if ($result->num_rows > 0)
-        {
+                </table>
 
-            while($row = $result->fetch_assoc())
-            {
-                $Totalbets = $row['Aantal'];
-            }
-        } else
-        {
-            echo "0 results";
-        }
+                <?php
 
-        // Totaal weddenschappen gewonnen & verloren
+                // Totaal weddenschappen
 
-        $sql = "SELECT match_status, COUNT(*) AS aantal FROM tbl_matches  WHERE match_user = $user GROUP BY match_status";
+                $conn = dbconnect();
 
-        $result = $conn->query($sql);
+                $sql = "SELECT match_id, COUNT(*) AS Aantal FROM `tbl_matches` WHERE match_user = $user";
 
-        if ($result->num_rows > 0)
-        {
-
-            while($row = $result->fetch_assoc())
-            {
-                $Betswon = $row['aantal'];
+                $result = $conn->query($sql);
 
                 if ($result->num_rows > 0)
                 {
 
                     while($row = $result->fetch_assoc())
                     {
-                        $Betslost = $row['aantal'];
+                        $Totalbets = $row['Aantal'];
                     }
                 } else
                 {
                     echo "0 results";
                 }
 
-            }
-        } else
-        {
-            echo "0 results";
-        }
+                // Totaal weddenschappen gewonnen & verloren
 
-        // Totaal aantal win
+                $sql = "SELECT match_status, COUNT(*) AS Aantal FROM tbl_matches  WHERE match_user = $user GROUP BY match_status";
 
-        $sql = "SELECT FORMAT(SUM(quotation*effort-effort), 2) AS Opbrengst FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 1 AND match_user = $user GROUP BY match_status";
+                $result = $conn->query($sql);
 
-        $result = $conn->query($sql);
+                if ($result->num_rows > 0)
+                {
 
-        if ($result->num_rows > 0)
-        {
+                    while($row = $result->fetch_assoc())
+                    {
+                        $Betswon = $row['Aantal'];
 
-            while($row = $result->fetch_assoc())
-            {
-                $Totalwin = $row['Opbrengst'];
-            }
-        } else
-        {
-            echo "0 results";
-        }
+                        if ($result->num_rows > 0)
+                        {
 
-        // Totaal aantal verlies
+                            while($row = $result->fetch_assoc())
+                            {
+                                $Betslost = $row['Aantal'];
 
-        $sql = "SELECT FORMAT(SUM(effort), 2) AS Verlies FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation INNER JOIN tbl_efforts ON effort_id = match_effort WHERE match_status = 2 AND match_user = $user";
+                                if ($result->num_rows > 0)
+                                {
 
-        $result = $conn->query($sql);
+                                    while ($row = $result->fetch_assoc())
+                                    {
 
-        if ($result->num_rows > 0)
-        {
+                                        $Betsopen = $row['Aantal'];
 
-            while($row = $result->fetch_assoc())
-            {
-                $Totallose = $row['Verlies'];
-            }
-        } else
-        {
-            echo "0 results";
-        }
+                                    }
 
-        // Totaal winst & winpercentage
+                                } else
+                                {
+                                    echo "0 results";
+                                }
+                            }
+                        } else
+                        {
+                            echo "0 results";
+                        }
 
-        $Income = $Totalwin - $Totallose;
+                    }
+                } else
+                {
+                    echo "0 results";
+                }
 
-        $Winpercentage = $Betswon / $Totalbets * 100;
+                // Totaal aantal win
 
-        ?>
+                $sql = "SELECT FORMAT(SUM(quotation*match_effort-match_effort), 2) AS Opbrengst FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation WHERE match_status = 1 AND match_user = $user GROUP BY match_status";
 
-    </div>
+                $result = $conn->query($sql);
 
-      <div class="col-md-3">
+                if ($result->num_rows > 0)
+                {
 
-        <table class="table table-bordered table-hover">
+                    while($row = $result->fetch_assoc())
+                    {
+                        $Totalwin = $row['Opbrengst'];
+                    }
+                } else
+                {
+                    echo "0 results";
+                }
 
-            <thead>
-            <tr>
-                <th colspan="2">Bet Statistics</th>
-            </tr>
-            </thead>
+                // Totaal aantal verlies
 
-            <?php
+                $sql = "SELECT FORMAT(SUM(match_effort), 2) AS Verlies FROM `tbl_matches` INNER JOIN tbl_quotations ON quotation_id = match_quotation WHERE match_status = 2 AND match_user = $user";
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0)
+                {
+
+                    while($row = $result->fetch_assoc())
+                    {
+                        $Totallose = $row['Verlies'];
+                    }
+                } else
+                {
+                    echo "0 results";
+                }
+
+                // Totaal winst & winpercentage
+
+                $Income = $Totalwin - $Totallose;
+
+                $Winpercentage = $Betswon / $Totalbets * 100;
+
+                ?>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <table class="table table-bordered table-hover">
+
+                    <thead>
+                    <tr>
+                        <th colspan="2">Bet Statistics</th>
+                    </tr>
+                    </thead>
+
+                    <?php
                     echo "<tr><td>";
                     echo "Bets:";
                     echo "<td>";
@@ -265,234 +306,234 @@ $result = $conn->query($sql);
                     echo "<td>";
                     echo "€ $Income";
 
-            ?>
+                    ?>
 
-        </table>
-      </div>
+                </table>
+            </div>
 
 
 
-      <div class="col-md-3">
+            <div class="col-md-3">
 
-          <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover">
 
-              <thead>
-              <tr>
-                  <th colspan="2">Bets per Competition</th>
-              </tr>
-              </thead>
+                    <thead>
+                    <tr>
+                        <th colspan="2">Bets per Competition</th>
+                    </tr>
+                    </thead>
 
-          <?php
+                    <?php
 
 
-          $sql = "SELECT competition_name, COUNT(*) AS Aantal FROM `tbl_matches` INNER JOIN tbl_competitions ON match_competition = competition_id WHERE match_user = $user GROUP BY match_competition ORDER BY Aantal DESC";
+                    $sql = "SELECT competition_name, COUNT(*) AS Aantal FROM `tbl_matches` INNER JOIN tbl_competitions ON match_competition = competition_id WHERE match_user = $user GROUP BY match_competition ORDER BY Aantal DESC";
 
-          $result = $conn->query($sql);
+                    $result = $conn->query($sql);
 
-          if ($result->num_rows > 0)
+                    if ($result->num_rows > 0)
 
-          {
+                    {
 
-            while($row = $result->fetch_assoc())
-            {
+                        while($row = $result->fetch_assoc())
+                        {
 
-                echo "<tr><td>";
-                echo $row["competition_name"];
-                echo "<td>";
-                echo $row["Aantal"];
+                            echo "<tr><td>";
+                            echo $row["competition_name"];
+                            echo "<td>";
+                            echo $row["Aantal"];
 
-            }
-          }else{
+                        }
+                    }else{
 
-            echo "0 results";
+                        echo "0 results";
 
-          }
+                    }
 
-          ?>
+                    ?>
 
-          </table>
+                </table>
 
-      </div>
+            </div>
 
 
-      <div class="col-md-3">
+            <div class="col-md-3">
 
-          <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover">
 
-              <thead>
-              <tr>
-                  <th colspan="2">Bets per Month</th>
-              </tr>
-              </thead>
+                    <thead>
+                    <tr>
+                        <th colspan="2">Bets per Month</th>
+                    </tr>
+                    </thead>
 
-              <?php
+                    <?php
 
-              // September
+                    // September
 
-              $sql = "SELECT *, COUNT(*) AS September FROM `tbl_matches` WHERE match_date BETWEEN '2018-09-01' AND '2018-09-30' AND match_user = $user";
+                    $sql = "SELECT *, COUNT(*) AS September FROM `tbl_matches` WHERE match_date BETWEEN '2018-09-01' AND '2018-09-30' AND match_user = $user";
 
-              $result = $conn->query($sql);
+                    $result = $conn->query($sql);
 
-              if ($result->num_rows > 0)
+                    if ($result->num_rows > 0)
 
-              {
+                    {
 
-                  while($row = $result->fetch_assoc())
-                  {
-                      $September = $row['September'];
-                  }
-              }else{
+                        while($row = $result->fetch_assoc())
+                        {
+                            $September = $row['September'];
+                        }
+                    }else{
 
-                  echo "0 results";
+                        echo "0 results";
 
-              }
+                    }
 
-              // Oktober
+                    // Oktober
 
-              $sql = "SELECT *, COUNT(*) AS Oktober FROM `tbl_matches` WHERE match_date BETWEEN '2018-10-01' AND '2018-10-31' AND match_user = $user";
+                    $sql = "SELECT *, COUNT(*) AS Oktober FROM `tbl_matches` WHERE match_date BETWEEN '2018-10-01' AND '2018-10-31' AND match_user = $user";
 
-              $result = $conn->query($sql);
+                    $result = $conn->query($sql);
 
-              if ($result->num_rows > 0)
+                    if ($result->num_rows > 0)
 
-              {
+                    {
 
-                  while($row = $result->fetch_assoc())
-                  {
-                      $Oktober = $row['Oktober'];
-                  }
-              }else{
+                        while($row = $result->fetch_assoc())
+                        {
+                            $Oktober = $row['Oktober'];
+                        }
+                    }else{
 
-                  echo "0 results";
+                        echo "0 results";
 
-              }
+                    }
 
-              // November
+                    // November
 
-              $sql = "SELECT *, COUNT(*) AS November FROM `tbl_matches` WHERE match_date BETWEEN '2018-11-01' AND '2018-11-30' AND match_user = $user";
+                    $sql = "SELECT *, COUNT(*) AS November FROM `tbl_matches` WHERE match_date BETWEEN '2018-11-01' AND '2018-11-30' AND match_user = $user";
 
-              $result = $conn->query($sql);
+                    $result = $conn->query($sql);
 
-              if ($result->num_rows > 0)
+                    if ($result->num_rows > 0)
 
-              {
+                    {
 
-                  while($row = $result->fetch_assoc())
-                  {
-                      $November = $row['November'];
-                  }
-              }else{
+                        while($row = $result->fetch_assoc())
+                        {
+                            $November = $row['November'];
+                        }
+                    }else{
 
-                  echo "0 results";
+                        echo "0 results";
 
-              }
+                    }
 
-              // December
+                    // December
 
-              $sql = "SELECT *, COUNT(*) AS December FROM `tbl_matches` WHERE match_date BETWEEN '2018-12-01' AND '2018-12-31' AND match_user = $user";
+                    $sql = "SELECT *, COUNT(*) AS December FROM `tbl_matches` WHERE match_date BETWEEN '2018-12-01' AND '2018-12-31' AND match_user = $user";
 
-              $result = $conn->query($sql);
+                    $result = $conn->query($sql);
 
-              if ($result->num_rows > 0)
+                    if ($result->num_rows > 0)
 
-              {
+                    {
 
-                  while($row = $result->fetch_assoc())
-                  {
-                      $December = $row['December'];
-                  }
-              }else{
+                        while($row = $result->fetch_assoc())
+                        {
+                            $December = $row['December'];
+                        }
+                    }else{
 
-                  echo "0 results";
+                        echo "0 results";
 
-              }
+                    }
 
-              echo "<tr><td>";
-              echo "September";
-              echo "<td>";
-              echo $September;
+                    echo "<tr><td>";
+                    echo "September";
+                    echo "<td>";
+                    echo $September;
 
-              echo "<tr><td>";
-              echo "Oktober";
-              echo "<td>";
-              echo $Oktober;
+                    echo "<tr><td>";
+                    echo "Oktober";
+                    echo "<td>";
+                    echo $Oktober;
 
-              echo "<tr><td>";
-              echo "November";
-              echo "<td>";
-              echo $November;
+                    echo "<tr><td>";
+                    echo "November";
+                    echo "<td>";
+                    echo $November;
 
-              echo "<tr><td>";
-              echo "December";
-              echo "<td>";
-              echo $December;
+                    echo "<tr><td>";
+                    echo "December";
+                    echo "<td>";
+                    echo $December;
 
-              ?>
+                    ?>
 
 
 
-          </table>
+                </table>
 
-      </div>
+            </div>
 
 
 
-      <div class="col-md-3">
+            <div class="col-md-3">
 
-          <?php
+                <?php
 
-          $sql = "SELECT DISTINCT match_user, user_firstname FROM `tbl_matches` INNER JOIN tbl_users ON user_id = match_user";
+                $sql = "SELECT DISTINCT match_user, user_firstname FROM `tbl_matches` INNER JOIN tbl_users ON user_id = match_user";
 
-          $result = $conn->query($sql);
+                $result = $conn->query($sql);
 
-          ?>
+                ?>
 
-          <form action="myToto.php" method="post">
+                <form action="myToto.php" method="post">
 
-          <select name="user">
+                    <select name="user">
 
-          <?php
+                        <?php
 
-          if ($result->num_rows > 0)
+                        if ($result->num_rows > 0)
 
-          {
+                        {
 
-              while($row = $result->fetch_assoc())
-              {
+                        while($row = $result->fetch_assoc())
+                        {
 
-                  ?>
+                            ?>
 
-                  <option name="<?php $row['match_user']; ?>"><?php echo $row['match_user']; ?></option>
+                            <option name="<?php $row['match_user']; ?>"><?php echo $row['match_user']; ?></option>
 
-        <?php }
+                        <?php }
 
-        ?>
+                        ?>
 
-          </select>
+                    </select>
 
 
 
-        <?php
-          } else
+                    <?php
+                    } else
 
-          {
-              echo "0 results";
-          }
+                    {
+                        echo "0 results";
+                    }
 
-          $conn->close();
+                    $conn->close();
 
-          //SELECT competition_name, match_status, COUNT(*) FROM `tbl_matches` INNER JOIN tbl_competitions on match_competition = competition_id WHERE match_competition = 4 AND match_user = $user GROUP BY match_status
+                    //SELECT competition_name, match_status, COUNT(*) FROM `tbl_matches` INNER JOIN tbl_competitions on match_competition = competition_id WHERE match_competition = 4 AND match_user = $user GROUP BY match_status
 
-          ?>
+                    ?>
 
-          <input type="submit" value="Select">
+                    <input type="submit" value="Select">
 
-          </form>
+                </form>
 
-      </div>
+            </div>
 
+        </div>
     </div>
-  </div>
 
 <?php
 include 'footer.php';

@@ -18,3 +18,7 @@
 .col-md-3 th {
     text-align: center;
 }
+
+.double {
+    border-left: solid 2.5px;
+}

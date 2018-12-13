@@ -4,8 +4,6 @@ include 'header.php';
 
 <?php
 
-$user = 2;
-
 $conn = dbconnect();
 
 ?>
