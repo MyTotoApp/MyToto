@@ -1,8 +1,8 @@
-.col-md-12 th {
+.col-md-14 th {
     text-align: center;
 }
 
-.col-md-12 td {
+.col-md-14 td {
     text-align: center;
 }
 
@@ -21,4 +21,12 @@
 
 .double {
     border-left: solid 2.5px;
+}
+
+.IncomeLose {
+    color: red;
+}
+
+.IncomeWin {
+    color: green;
 }
